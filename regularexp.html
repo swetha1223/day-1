@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //quantifiers  specifies how many times a character or group should appear
+    let text="hello all";
+    let pattern=/\l*/g;
+    let pattern2=/\l+/g;
+    let pattern3=/\l?/g;
+    //*empty space allocte as aaa ' '
+    //+no blank spaces
+    //? space and 
+    let result=text.match(pattern);
+    let result2=text.match(pattern2);
+    let result3=text.match(pattern3);
+    
+    console.log(result)
+    console.log(result2)
+    console.log(result3)
+    let sentence="hai hello\nhai,i'm good"
+    let pattern4=/^\hai+/igm;
+    let result5=sentence.match(pattern4);
+    console.log(result5);
+    //modifiers(flags)change how regex matches
+    //i case insensitive//g global match(all occur)//m multiline
+    //meta character have special meaning in regex
+    //. any char expect newline
+    //\d digit(0-9)
+    //\w word char(letters,digits,_)
+    //\s whitespaces
+   // ^ starting of a string line
+    //$ ending  of a string line
+    let digitchar="Js001";
+    let pattern6=/\d+\w/g;
+    let result6=digitchar.match(pattern6);
+    console.log(result6);
+    // grouping 
+    //parentheses()are used to group patterns and capture submatches
+    let username="javascript program";
+    let pattern7=/(\w+)/g;
+    let result7=username.match(pattern7);
+    console.log(result7);
+    console.log(result7[0]);
+    console.log(result7[1]);
+    //common regex methods
+    //test() returns true or false
+    //exec() returns matched result with groups
+    //match() returns array of matches
+    //replace() replaces matches
+    //split() splits string using regex
+    let lines ="starfruit mango pineapple starfruit"
+    let pattern8=/apple/;
+    console.log(pattern8.test(lines));
+    
+
+    
+    </script>
+</body>
+</html>
