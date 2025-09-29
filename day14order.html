@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //promise
+    //is an object that represents the eventual completion(or failure)of asynchronus operation
+    //pending->intial state,operation not completed yet
+    //fulfilled(resolved)->operation completed sucess fully
+    //rejected->operation failed
+    new Promise((resolve,reject)=>{
+        let tosscoin=new Promise((resolve,reject))
+        let rand=Math.floor(Math.random()*2)
+        if(rand==0)
+          resolve(rand)
+       else
+          reject(rand)
+    })
+    .then((rand)console.log(`you win ${rand}`))
+    .catch((rand)=>console.log(`you lose ${rand}`))
+    async function textMessage(){
+        return"message sended!."
+    }
+    console.log(textMessage())
+    function placeorder(){
+        return new Promise((resolve,reject)=>{
+            console.log("trying to place order.....");
+            setTimeout(() => {
+            resolve("order placed...")
+                
+            }, 2000);
+        })
+
+    }
+    async function trackdelivery(){
+        let step=[
+            "preparing your order",
+            "on the way to deliver your order",
+            "order deliverd"
+
+        ]
+        for(let step of steps)
+        await new Promise((res)=>setTimeout.(res,2000))
+
+
+
+    }async function orderstatus(){
+        let Status=await placeholder();
+        console.log(Status);
+        trackDelivery()
+    }
+    orderStatus();
+</script>
+</body>
+</html>
